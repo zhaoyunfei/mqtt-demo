@@ -1,0 +1,43 @@
+2024-04-18 10:12:35.005  INFO [           main] z.mqtt.MqttReconnectionApplication.logStarting:55  - Starting MqttReconnectionApplication on DESKTOP-P3M9LV3 with PID 20096 (E:\code\mqtt-demo\mqtt-reconnection\target\classes started by admin in E:\code\mqtt-demo)
+2024-04-18 10:12:35.009  INFO [           main] tReconnectionApplication.logStartupProfileInfo:655 - The following profiles are active: dev
+2024-04-18 10:12:35.822  INFO [           main] b.w.embedded.tomcat.TomcatWebServer.initialize:108 - Tomcat initialized with port(s): 8080 (http)
+2024-04-18 10:12:35.831  INFO [           main] o.apache.catalina.core.StandardService.log:173     - Starting service [Tomcat]
+2024-04-18 10:12:35.831  INFO [           main] org.apache.catalina.core.StandardEngine.log:173    - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-04-18 10:12:35.910  INFO [           main] o.a.c.c.C.[Tomcat].[localhost].[/].log:173         - Initializing Spring embedded WebApplicationContext
+2024-04-18 10:12:35.911  INFO [           main] pplicationContext.prepareWebApplicationContext:285 - Root WebApplicationContext: initialization completed in 868 ms
+2024-04-18 10:12:35.966  WARN [           main] nfigServletWebServerApplicationContext.refresh:559 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mqttClient' defined in class path resource [com/zhaoyunfei/mqtt/mqtt/MqttConfig.class]: 'mqttClient' depends on missing bean 'ros'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'ros' available
+2024-04-18 10:12:35.969  INFO [           main] o.apache.catalina.core.StandardService.log:173     - Stopping service [Tomcat]
+2024-04-18 10:12:35.977  INFO [           main] tionEvaluationReportLoggingListener.logMessage:136 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-04-18 10:12:36.026 ERROR [           main] o.s.b.d.LoggingFailureAnalysisReporter.report:40   - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean named 'ros' that could not be found.
+
+
+Action:
+
+Consider defining a bean named 'ros' in your configuration.
+
+2024-04-18 10:12:58.331  INFO [           main] z.mqtt.MqttReconnectionApplication.logStarting:55  - Starting MqttReconnectionApplication on DESKTOP-P3M9LV3 with PID 23612 (E:\code\mqtt-demo\mqtt-reconnection\target\classes started by admin in E:\code\mqtt-demo)
+2024-04-18 10:12:58.334  INFO [           main] tReconnectionApplication.logStartupProfileInfo:655 - The following profiles are active: dev
+2024-04-18 10:12:58.997  INFO [           main] b.w.embedded.tomcat.TomcatWebServer.initialize:108 - Tomcat initialized with port(s): 8080 (http)
+2024-04-18 10:12:59.005  INFO [           main] o.apache.catalina.core.StandardService.log:173     - Starting service [Tomcat]
+2024-04-18 10:12:59.005  INFO [           main] org.apache.catalina.core.StandardEngine.log:173    - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-04-18 10:12:59.067  INFO [           main] o.a.c.c.C.[Tomcat].[localhost].[/].log:173         - Initializing Spring embedded WebApplicationContext
+2024-04-18 10:12:59.068  INFO [           main] pplicationContext.prepareWebApplicationContext:285 - Root WebApplicationContext: initialization completed in 696 ms
+2024-04-18 10:12:59.638  INFO [           main] com.zhaoyunfei.mqtt.mqtt.MqttConfig.mqttClient:53  - 连接Mqtt服务器成功，地址=tcp://192.168.3.39:1883
+2024-04-18 10:12:59.731  INFO [           main] s.concurrent.ThreadPoolTaskExecutor.initialize:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-04-18 10:12:59.905  INFO [           main] o.s.b.w.embedded.tomcat.TomcatWebServer.start:220  - Tomcat started on port(s): 8080 (http) with context path ''
+2024-04-18 10:12:59.912  INFO [           main] .z.mqtt.MqttReconnectionApplication.logStarted:61  - Started MqttReconnectionApplication in 1.939 seconds (JVM running for 2.65)
+2024-04-18 10:13:56.676  INFO [MQTT Rec: ros-patrol-slave] .z.mqtt.mqtt.CustomMqttCallback.connectionLost:35  - [MQTT]连接断开，1分钟之后尝试重连
+2024-04-18 10:14:57.006  INFO [MQTT Call: ros-patrol-slave] z.mqtt.mqtt.CustomMqttCallback.connectComplete:67  - 重连之后重新订阅所有的话题
+2024-04-18 10:14:57.007  INFO [MQTT Rec: ros-patrol-slave] .z.mqtt.mqtt.CustomMqttCallback.connectionLost:41  - [MQTT]断线重连成功！重连结果=true
+2024-04-18 10:15:20.558  INFO [SpringContextShutdownHook] s.s.concurrent.ThreadPoolTaskExecutor.shutdown:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-04-18 10:15:20.579  WARN [SpringContextShutdownHook] isposableBeanAdapter.invokeCustomDestroyMethod:349 - Destroy method 'close' on bean with name 'mqttClient' threw an exception: 已连接客户机 (32100)
