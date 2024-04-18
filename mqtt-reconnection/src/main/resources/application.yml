@@ -21,15 +21,15 @@ logging:
     file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %5level [%15thread] %-50.50(%logger{39}.%method:%-3line) - %msg%n"
     console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %yellow(%5level) [%15thread] %cyan(%-50.50(%logger{39}.%method:%-3line)) - %msg%n"
   file:
-    name: ./logs/javacc-demo/javacc-demo.log
+    name: ./logs/mqtt-demo/mqtt-demo.log
   level:
-    com.zhaoyunfei.javacc: debug
+    com.zhaoyunfei.mqtt: debug
 
 
 # MQTT相关参数
 mqtt:
   enable: true
-  host: tcp://192.168.3.39:1883
+  host: tcp://127.0.0.1:1883
   clientId: ros-patrol-slave
   username: admin
   password: 123456
